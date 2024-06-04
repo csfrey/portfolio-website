@@ -1,26 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.scss";
+import { Box, createTheme } from "@mui/material";
+import { ThemeProvider } from "@emotion/react";
+// TODO: move these into module structure
+import { StickyContainer } from "react-sticky";
+import { offBlack } from "./constants";
+import SiteHeader from "./components/SiteHeader";
+import SiteSummary from "./components/SiteSummary";
+import AboutMe from "./components/AboutMe";
+import ServicesSummaries from "./components/ServicesSummaries";
+import SiteFooter from "./components/SiteFooter";
 
-function App() {
+const theme = createTheme({
+  typography: {
+    fontFamily: "PlayfairDisplay, PlayfairDisplay-Italic",
+  },
+});
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <StickyContainer>
+        <Box sx={{
+          backgroundColor: offBlack,
+          color: 'white',
+          fontFamily: 'PlayfairDisplay'
+        }}>
+          <SiteHeader />
+          <Box sx={{ padding: "0 16vw" }}>
+            <SiteSummary />
+            <AboutMe />
+            <ServicesSummaries />
+          </Box>
+          <SiteFooter />
+        </Box>
+      </StickyContainer>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
