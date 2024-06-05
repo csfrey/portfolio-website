@@ -1,5 +1,4 @@
-import { Box, Link } from "@mui/material";
-import React from "react";
+import { Box } from "@mui/material";
 import { Suspense } from "react";
 import { Img } from "react-image";
 import WhiteLink from "../widgets/WhiteLink";
