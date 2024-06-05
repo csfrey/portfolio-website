@@ -15,6 +15,7 @@
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@types/react-responsive": "^8.0.8",
+    "http-proxy-middleware": "^2.0.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-image": "^4.1.0",
@@ -27,11 +28,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start-frontend": "react-scripts start --openssl-legacy-provider",
-    "start-api": "cd api && venv/bin/flask run --no-debugger",
-    "start": "concurrently \"npm run start-frontend\" \"npm run start-api\"",
-    "build-deploy": "npm install && npm run build && cd api && pip3 install -r requirements.txt",
-    "start-deploy": "cd api && gunicorn -b :5000 api:app",
+    "start": "react-scripts start --openssl-legacy-provider",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -57,7 +54,6 @@
   "proxy": "http://localhost:5000",
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@types/react-sticky": "^6.0.6",
-    "concurrently": "^8.2.2"
+    "@types/react-sticky": "^6.0.6"
   }
 }
