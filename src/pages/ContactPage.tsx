@@ -1,35 +1,30 @@
 import { Box, Button, TextField } from "@mui/material";
+import { sendForm } from "emailjs-com";
 import React, { useState } from "react";
+import WhiteLink from "../widgets/WhiteLink";
 
 const inputStyles = {
   marginBottom: "4vh",
 };
 
 const ContactPage = () => {
-  const [inputs, setInputs] = useState<any>({});
   const [submitted, setSubmitted] = useState(false);
 
-  function handleChange(k: string, e: any) {
-    setInputs({
-      ...inputs,
-      [k]: e.target.value,
-    });
+  function sendEmail(e: any) {
+    e.preventDefault();
+    setSubmitted(true);
+
+    sendForm(
+      process.env.REACT_APP_EMAIL_SERVICE_ID,
+      process.env.REACT_APP_EMAIL_TEMPLATE_ID,
+      e.target,
+      process.env.REACT_APP_EMAIL_USER_ID
+    );
+
+    console.log("submitted");
   }
 
-  function handleSubmit() {
-    if (inputs.name && inputs.email && inputs.message) {
-      setSubmitted(true);
-      fetch("/api/message-me", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(inputs),
-      });
-    }
-  }
-
-  return submitted ? (
+  const thanks = (
     <Box
       sx={{
         fontSize: "30px",
@@ -39,19 +34,36 @@ const ContactPage = () => {
     >
       Thank you!
     </Box>
-  ) : (
+  );
+
+  const contactForm = (
     <React.Fragment>
+      <Box sx={{ textAlign: "center" }}>
+        Email me at{" "}
+        <WhiteLink href="mailto:charliesagefrey95@gmail.com">
+          charliesagefrey95@gmail.com
+        </WhiteLink>
+      </Box>
+      <Box
+        sx={{
+          textAlign: "center",
+          margin: "2vh 0 1vh 0",
+        }}
+      >
+        or
+      </Box>
       <Box
         sx={{
           fontSize: "30px",
           textAlign: "center",
-          marginBottom: "8vh",
+          marginBottom: "4vh",
         }}
       >
         Write me a message!
       </Box>
       <Box
         component="form"
+        onSubmit={sendEmail}
         autoComplete="off"
         sx={{
           flexGrow: 1,
@@ -60,42 +72,35 @@ const ContactPage = () => {
           padding: "0 20vw",
         }}
       >
+        <TextField sx={inputStyles} name="from_name" label="Name" required />
         <TextField
           sx={inputStyles}
-          id="name-input"
-          label="Name"
-          required
-          onChange={(e) => handleChange("name", e)}
-        />
-        <TextField
-          sx={inputStyles}
-          id="email-input"
+          name="email"
           label="Email"
           helperText="I'll never share your email"
           required
-          onChange={(e) => handleChange("email", e)}
         />
         <TextField
           sx={inputStyles}
-          id="phone-input"
+          name="phone_number"
           label="Phone number"
           helperText="I'll never share your number either"
-          onChange={(e) => handleChange("number", e)}
         />
         <TextField
           sx={inputStyles}
-          id="message-input"
+          name="message"
           label="Message"
           multiline
           required
-          onChange={(e) => handleChange("message", e)}
         />
-        <Button variant="outlined" onClick={handleSubmit}>
+        <Button variant="outlined" type="submit">
           Send
         </Button>
       </Box>
     </React.Fragment>
   );
+
+  return submitted ? thanks : contactForm;
 };
 
 export default ContactPage;
