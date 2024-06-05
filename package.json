@@ -29,7 +29,7 @@
     "start-frontend": "react-scripts start --openssl-legacy-provider",
     "start-api": "cd api && venv/bin/flask run --no-debugger",
     "start": "concurrently \"npm run start-frontend\" \"npm run start-api\"",
-    "build-deploy": "npm install && npm build && cd api && pip3 install -r requirements.txt",
+    "build-deploy": "npm install && npm run build && cd api && pip3 install -r requirements.txt",
     "start-deploy": "cd api && gunicorn -b :5000 api:app",
     "build": "react-scripts build",
     "test": "react-scripts test",
