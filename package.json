@@ -1,62 +1,14 @@
 {
   "name": "portfolio-website",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@emotion/react": "^11.11.4",
-    "@emotion/styled": "^11.11.5",
-    "@mui/icons-material": "^5.15.19",
-    "@mui/material": "^5.15.19",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.97",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-image": "^4.1.0",
-    "react-responsive": "^10.0.0",
-    "react-router-dom": "^6.23.1",
-    "react-scripts": "^5.0.1",
-    "react-sticky": "^6.0.3",
-    "sass": "^1.77.4",
-    "typescript": "^4.9.5",
-    "web-vitals": "^2.1.4"
-  },
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "start-frontend": "react-scripts start --openssl-legacy-provider",
-    "start-api": "cd api && venv/bin/flask run --no-debugger",
-    "start": "concurrently \"npm run start-frontend\" \"npm run start-api\"",
-    "build-deploy": "npm install && npm run build && cd api && pip3 install -r requirements.txt",
-    "start-deploy": "cd api && gunicorn -b :5000 api:app",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "proxy": "http://localhost:5000",
-  "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@types/react-sticky": "^6.0.6",
-    "concurrently": "^8.2.2"
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
   }
 }
