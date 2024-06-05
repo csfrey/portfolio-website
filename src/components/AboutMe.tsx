@@ -9,11 +9,11 @@ const headshot = "https://i.imgur.com/NHf8ysU.jpeg";
 
 const AboutMe = () => {
   return (
-    <React.Fragment>
+    <Box>
       <Box
         sx={{
           display: "flex",
-          marginBottom: '6vw'
+          marginBottom: "6vw",
         }}
       >
         <Box
@@ -32,7 +32,7 @@ const AboutMe = () => {
           </Suspense>
         </Box>
         <Box>
-          I'm currently based in Grove City, PA. I'm hoping to move back to
+          Right now, I'm based in Grove City, PA. I'm hoping to move back to
           Colorado Springs by the end of Summer 2024.
         </Box>
       </Box>
@@ -43,14 +43,14 @@ const AboutMe = () => {
           lineHeight: 1.6,
         }}
       >
-        After getting my Bachelor's degree in Computer Engineering, I spent
-        several years building software solutions in the public and private
-        sector.
+        After getting my Bachelor's degree in Computer Engineering from the
+        University of Dayton, I spent several years building software solutions
+        in the public and private sector.
       </Box>
       <Box sx={{ fontStyle: "italic" }}>
-        Take a look at my <WhiteLink>portfolio</WhiteLink>.
+        Take a look at my <WhiteLink href="/portfolio">portfolio</WhiteLink>.
       </Box>
-    </React.Fragment>
+    </Box>
   );
 };
 

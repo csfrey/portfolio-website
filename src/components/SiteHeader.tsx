@@ -15,12 +15,12 @@ import { Sticky } from "react-sticky";
 const drawerLinks = (
   <React.Fragment>
     <ListItem>
-      <ListItemButton>
+      <ListItemButton href="/portfolio">
         <ListItemText primary="Portfolio" />
       </ListItemButton>
     </ListItem>
     <ListItem>
-      <ListItemButton>
+      <ListItemButton href="/contact">
         <ListItemText primary="Contact" />
       </ListItemButton>
     </ListItem>
@@ -66,7 +66,9 @@ const SiteHeader = () => {
               sx={{
                 alignContent: "center",
                 fontSize: "38px",
+                cursor: "pointer",
               }}
+              onClick={() => (window.location.href = "/")}
             >
               Charlie Frey
             </Box>

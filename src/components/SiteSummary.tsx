@@ -20,9 +20,12 @@ const SiteSummary = () => {
         over four years of industry experience.
       </Box>
       <Box sx={{ fontStyle: "italic" }}>
-        I'm currently available for <WhiteLink>personal tutoring</WhiteLink>,{" "}
-        <WhiteLink>consulting engagements</WhiteLink>, and{" "}
-        <WhiteLink>full-time work</WhiteLink>.
+        I'm currently available for{" "}
+        <WhiteLink href="#personal-tutoring">personal tutoring</WhiteLink>,{" "}
+        <WhiteLink href="#consulting-engagements">
+          consulting engagements
+        </WhiteLink>
+        , and <WhiteLink href="#full-time-work">full-time work</WhiteLink>.
       </Box>
     </Box>
   );

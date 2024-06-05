@@ -18,6 +18,7 @@
     "react-dom": "^18.3.1",
     "react-image": "^4.1.0",
     "react-responsive": "^10.0.0",
+    "react-router-dom": "^6.23.1",
     "react-scripts": "5.0.1",
     "react-sticky": "^6.0.3",
     "sass": "^1.77.4",
@@ -28,6 +29,8 @@
     "start-frontend": "react-scripts start --openssl-legacy-provider",
     "start-api": "cd api && venv/bin/flask run --no-debugger",
     "start": "concurrently \"npm run start-frontend\" \"npm run start-api\"",
+    "build-deploy": "npm install && npm build && cd api && pip3 install -r requirements.txt",
+    "start-deploy": "cd api && gunicorn -b :5000 api:app",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
