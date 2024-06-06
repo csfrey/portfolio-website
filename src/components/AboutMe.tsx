@@ -43,7 +43,7 @@ const AboutMe = () => {
       >
         After getting my Bachelor's degree in Computer Engineering from the
         University of Dayton, I spent several years building software solutions
-        in the public and private sector.
+        in the public and private sectors.
       </Box>
       <Box sx={{ fontStyle: "italic" }}>
         Take a look at my <WhiteLink href="/portfolio">portfolio</WhiteLink>.
