@@ -7,7 +7,7 @@ const WhiteLink = (props: any) => {
       sx={{
         color: "white",
         textDecorationColor: "white",
-        cursor: 'pointer'
+        cursor: "pointer",
       }}
     >
       {props.children}
