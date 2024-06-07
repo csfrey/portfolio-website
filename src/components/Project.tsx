@@ -20,7 +20,7 @@ const Project = ({
     <Box
       className="project-box"
       sx={{
-        marginBottom: "8vw",
+        marginBottom: "4vw",
       }}
     >
       <Box
