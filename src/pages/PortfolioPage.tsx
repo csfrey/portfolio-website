@@ -25,7 +25,7 @@ const PortfolioPage = () => {
         planning team to organize runway times, draw flight paths on an interactive 3D globe, collaborate 
         on mission-critical information, and more, all with multi-user features, real-time updates, and
         automatic error checking in an isolated, secure software environment. We even had the opportunity
-        to visit Red Flag at Eilson AFB in Fairbanks Alaska to get feedback on our work from real AF pilots.
+        to visit Red Flag at Eielson AFB in Fairbanks Alaska to get feedback on our work from real AF pilots.
         You can read more about AMPED-UP on LinQuest's website."
         image="https://www.aerotechnews.com/nellisafb/wp-content/uploads/sites/5/2021/12/nellis-wsint2.jpg"
         imageSourceText="https://www.aerotechnews.com"
