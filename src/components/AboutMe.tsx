@@ -1,6 +1,7 @@
 import { Box } from "@mui/material";
 import { Suspense } from "react";
 import WhiteLink from "../widgets/WhiteLink";
+import { codeWarsUrl } from "../constants";
 // import headshot from '../images/headshot.jpeg'
 
 const headshot = "https://i.imgur.com/NHf8ysU.jpeg";
@@ -46,7 +47,8 @@ const AboutMe = () => {
         in the public and private sectors.
       </Box>
       <Box sx={{ fontStyle: "italic" }}>
-        Take a look at my <WhiteLink href="/portfolio">portfolio</WhiteLink>.
+        Take a look at my new <WhiteLink href={codeWarsUrl}>CodeWars</WhiteLink>{" "}
+        profile.
       </Box>
     </Box>
   );

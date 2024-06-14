@@ -9,8 +9,9 @@ import {
 } from "@mui/material";
 import React, { useState } from "react";
 import MediaQuery from "react-responsive";
-import { linkedInUrl, githubUrl, offBlack } from "../constants";
+import { linkedInUrl, githubUrl, offBlack, codeWarsUrl } from "../constants";
 import { Sticky } from "react-sticky";
+import CodeWarsIcon from "../widgets/CodeWarsIcon";
 
 const drawerLinks = (
   <React.Fragment>
@@ -22,6 +23,11 @@ const drawerLinks = (
     <ListItem>
       <ListItemButton href="/contact">
         <ListItemText primary="Contact" />
+      </ListItemButton>
+    </ListItem>
+    <ListItem>
+      <ListItemButton href={codeWarsUrl}>
+        <CodeWarsIcon />
       </ListItemButton>
     </ListItem>
     <ListItem>
