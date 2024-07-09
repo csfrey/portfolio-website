@@ -9,7 +9,13 @@ import {
 } from "@mui/material";
 import React, { useState } from "react";
 import MediaQuery from "react-responsive";
-import { linkedInUrl, githubUrl, offBlack, codeWarsUrl } from "../constants";
+import {
+  linkedInUrl,
+  githubUrl,
+  offBlack,
+  codeWarsUrl,
+  fontSize,
+} from "../constants";
 import { Sticky } from "react-sticky";
 import CodeWarsIcon from "../widgets/CodeWarsIcon";
 
@@ -71,7 +77,7 @@ const SiteHeader = () => {
             <Box
               sx={{
                 alignContent: "center",
-                fontSize: "38px",
+                fontSize: fontSize.large,
                 cursor: "pointer",
               }}
               onClick={() => (window.location.href = "/")}

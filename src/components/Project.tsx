@@ -1,5 +1,6 @@
 import { Box } from "@mui/material";
 import WhiteLink from "../widgets/WhiteLink";
+import { fontSize } from "../constants";
 
 const Project = ({
   title,
@@ -37,7 +38,7 @@ const Project = ({
         />
         <Box
           sx={{
-            fontSize: "calc(6px + 0.5vw)",
+            fontSize: fontSize.tiny,
             fontStyle: "italic",
             textAlign: "center",
           }}
@@ -48,7 +49,7 @@ const Project = ({
       <Box className="project-text">
         <Box
           sx={{
-            fontSize: "calc(14px + 1vw)",
+            fontSize: fontSize.normal,
             marginBottom: "1vw",
           }}
         >
@@ -56,7 +57,7 @@ const Project = ({
         </Box>
         <Box
           sx={{
-            fontSize: "calc(8px + 0.5vw)",
+            fontSize: fontSize.smaller,
             marginBottom: "1vw",
           }}
         >

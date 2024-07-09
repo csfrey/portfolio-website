@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import Project from "../components/Project";
-import { loremipsum } from "../constants";
+import { fontSize } from "../constants";
 
 const PortfolioPage = () => {
   return (
@@ -8,7 +8,7 @@ const PortfolioPage = () => {
       <Box
         sx={{
           textAlign: "center",
-          fontSize: "calc(20px + 1vw)",
+          fontSize: fontSize.big,
           marginBottom: "4vw",
         }}
       >

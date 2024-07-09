@@ -1,5 +1,6 @@
 import { Box } from "@mui/material";
 import WhiteLink from "../widgets/WhiteLink";
+import { fontSize } from "../constants";
 
 const SiteSummary = () => {
   return (
@@ -11,7 +12,7 @@ const SiteSummary = () => {
     >
       <Box
         sx={{
-          fontSize: "calc(30px + 1vw)",
+          fontSize: fontSize.huge,
           marginBottom: "20px",
           lineHeight: 1.6,
         }}

@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import { loremipsum } from "../constants";
+import { fontSize } from "../constants";
 
 const Service = ({
   id,
@@ -21,7 +21,7 @@ const Service = ({
   >
     <Box
       sx={{
-        fontSize: "calc(20px + 1vw)",
+        fontSize: fontSize.large,
         width: "30vw",
       }}
     >
@@ -30,7 +30,7 @@ const Service = ({
     <Box
       sx={{
         width: "50vw",
-        fontSIze: "calc(10px + 1vw)",
+        fontSIze: fontSize.small,
       }}
     >
       {summary}

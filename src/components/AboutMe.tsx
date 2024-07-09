@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import { Suspense } from "react";
 import WhiteLink from "../widgets/WhiteLink";
-import { codeWarsUrl } from "../constants";
+import { codeWarsUrl, fontSize } from "../constants";
 // import headshot from '../images/headshot.jpeg'
 
 const headshot = "https://i.imgur.com/NHf8ysU.jpeg";
@@ -37,7 +37,7 @@ const AboutMe = () => {
       </Box>
       <Box
         sx={{
-          fontSize: "calc(20px + 1vw)",
+          fontSize: fontSize.big,
           marginBottom: "20px",
           lineHeight: 1.6,
         }}

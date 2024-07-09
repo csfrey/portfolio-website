@@ -2,6 +2,7 @@ import { Box, Button, TextField } from "@mui/material";
 import { sendForm } from "emailjs-com";
 import React, { useState } from "react";
 import WhiteLink from "../widgets/WhiteLink";
+import { fontSize } from "../constants";
 
 const inputStyles = {
   marginBottom: "4vh",
@@ -27,7 +28,7 @@ const ContactPage = () => {
   const thanks = (
     <Box
       sx={{
-        fontSize: "30px",
+        fontSize: fontSize.large,
         textAlign: "center",
         marginBottom: "8vh",
       }}
@@ -54,7 +55,7 @@ const ContactPage = () => {
       </Box>
       <Box
         sx={{
-          fontSize: "30px",
+          fontSize: fontSize.large,
           textAlign: "center",
           marginBottom: "4vh",
         }}

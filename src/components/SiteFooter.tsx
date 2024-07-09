@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import WhiteLink from "../widgets/WhiteLink";
-import { repoUrl } from "../constants";
+import { fontSize, repoUrl } from "../constants";
 
 const SiteFooter = () => {
   return (
@@ -9,7 +9,7 @@ const SiteFooter = () => {
         display: "flex",
         justifyContent: "space-between",
         padding: "1vw 2.5vw",
-        fontSize: "calc(8px + 0.5vw)",
+        fontSize: fontSize.tiny,
       }}
     >
       <Box>Thanks for reading!</Box>
